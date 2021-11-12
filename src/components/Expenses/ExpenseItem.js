@@ -7,10 +7,10 @@ const ExpenseItem = (props) => {
 
     const [title, setTitle] = useState(props.title);
 
-    const clickHandler = () => {
-      setTitle("Updated!");
-      console.log("Button clicked");
-    };
+    // const clickHandler = () => {
+    //   setTitle("Updated!");
+    //   console.log("Button clicked");
+    // };
 
     return (
       <li>
@@ -21,7 +21,7 @@ const ExpenseItem = (props) => {
           {/* <span className="expense-item__id">ID: {props.id}</span> */}
         </div>
         <div className="expense-item__price">{props.amount} €</div>
-        <button onClick={clickHandler}>Change Title</button>
+        {/* <button onClick={clickHandler}>Change Title</button> */}
       </Card>
       </li>
     );

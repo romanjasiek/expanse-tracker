@@ -1,34 +1,20 @@
 import { useState } from "react";
 import { nanoid } from "nanoid";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearchDollar } from '@fortawesome/free-solid-svg-icons'
 
 import "./styles/app.scss";
 
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+import Footer from "./components/UI/Footer";
 
 const DUMMY_EXPENSES = [
   {
     id: nanoid(),
-    title: 'Toilet Paper',
-    amount: 94.12,
-    date: new Date(2020, 7, 14),
-  },
-  { 
-    id: nanoid(), 
-    title: 'New TV', 
-    amount: 799.49, 
-    date: new Date(2021, 2, 12) },
-  {
-    id: nanoid(),
-    title: 'Car Insurance',
-    amount: 294.67,
-    date: new Date(2021, 2, 28),
-  },
-  {
-    id: nanoid(),
-    title: 'New Desk (Wooden)',
-    amount: 450,
-    date: new Date(2021, 5, 12),
+    title: 'Sample Entry',
+    amount: 9.99,
+    date: new Date(2021, 1, 1),
   },
 ];
 
@@ -44,8 +30,10 @@ const App = () => {
 
   return (
     <div>
+      <h1 className="new-expense"><FontAwesomeIcon icon={faSearchDollar} /> Expense Tracker</h1>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses expensesItem={expenses} />
+      <Footer />
     </div>
   );
 };

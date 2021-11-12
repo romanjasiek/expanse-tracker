@@ -1,0 +1,37 @@
+@import "Variables";
+
+.footer-menu {
+    background-color: $app-background-lighter;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+    padding: 0.4rem;
+    border-top: 1px solid;
+    border-color: #6e6e6e;
+    color: #6e6e6e;
+    font-size: 0.7rem;
+    justify-content: space-evenly;
+    list-style-type: none;
+    width: 100%;
+    position: absolute;
+    bottom: -10;
+    left: 0;
+  }
+  
+  .footer-menu a {
+    // flex: 1;
+    // margin-bottom: auto;
+    color: #6e6e6e;
+    text-decoration: none;
+    transition: color 2s ease-in-out;
+  }
+  
+  .footer-menu a:hover {
+    color: $expanse-item-price-background;
+    transition: all 0s;
+  }
+
+  .footer-icon {
+    color: $expanse-item-price-background;
+  }

@@ -23,7 +23,7 @@ const ExpenseForm = (props) => {
         
         const expenseData = {
             title: enteredTitle,
-            amount: enteredAmount,
+            amount: +enteredAmount,
             date: new Date(enteredDate),
             id: nanoid(),
             };
@@ -50,10 +50,12 @@ const ExpenseForm = (props) => {
                     <label>Date</label>
                     <input type="date" value={enteredDate} min="2019-01-01" max="2023-12-31" onChange={dateChangeHandler} />
                 </div>
-            </div>
-            <div className="new-expense__actions">
-                <button type="button" onClick={props.onCancel}>Cancel</button>
-                <button type="submit">Add Expense</button>
+
+                <div className="new-expense__control new-expense__actions">
+                    <button type="button" onClick={props.onCancel}>Cancel</button>
+                    <button type="submit">Add Expense</button>
+                </div>
+
             </div>
         </form>
     )
