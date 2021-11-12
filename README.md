@@ -4,7 +4,7 @@ The Frontend part is finished so far. Maybe I will add some Backend features lat
 
 Version: 0.1.1
 
-## To-Do: Add
+## To-Do:
 
 - Mobile Optimization
 - Backend
