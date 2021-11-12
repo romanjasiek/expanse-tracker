@@ -1,0 +1,52 @@
+@import "Variables";
+
+.new-expense {
+    background-color: $app-background-lighter;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  }
+  
+  .new-expense button {
+    // font: inherit;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px $default-border-color;
+    color: $default-font-color;
+    padding: 0.5rem;
+    border: 1px solid $default-border-color;
+    background-color: $expanse-item-price-background;
+    border-radius: 12px;
+    margin-right: 1rem;
+  }
+  
+  .new-expense button:hover,
+  .new-expense button:active {
+    background-color: $default-border-color;
+    border-color: $default-border-color;
+  }
+  
+  .new-expense button.alternative {
+    color: $default-border-color;
+    border-color: transparent;
+    background-color: transparent;
+  }
+  
+  .new-expense button.alternative:hover,
+  .new-expense button.alternative:active {
+    background-color: $expanse-item-price-background;
+  }
+
+  @media (min-width: 580px) {
+  
+    .new-expense button {
+      font-size: 1.25rem;
+      padding: 0.5rem 1.5rem;
+    }
+  }

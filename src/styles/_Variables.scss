@@ -1,0 +1,10 @@
+@use "sass:color";
+@use "sass:math";
+// Colors
+$expanse-item-background: #555555!default;
+$expanse-item-price-background: rgb(233, 196, 106)!default;
+
+$default-font-color: #fefefe!default;
+$default-border-color: color.scale($expanse-item-price-background, $lightness: -50%)!default;
+$app-background: color.scale($expanse-item-background, $lightness: -50%)!default;
+$app-background-lighter: color.scale($expanse-item-background, $lightness: -25%)!default;
