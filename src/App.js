@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { nanoid } from "nanoid";
 
 import "./styles/app.scss";
@@ -5,7 +6,7 @@ import "./styles/app.scss";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 
-const expenses = [
+const DUMMY_EXPENSES = [
   {
     id: nanoid(),
     title: 'Toilet Paper',
@@ -31,11 +32,16 @@ const expenses = [
   },
 ];
 
-const addExpenseHandler = (expense) => {
-    console.log(expense);
-};
 
 const App = () => {
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+
+  const addExpenseHandler = (expense) => {
+    setExpenses((prevExpenses) => {
+    return [expense, ...prevExpenses]
+    });
+  };
+
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />

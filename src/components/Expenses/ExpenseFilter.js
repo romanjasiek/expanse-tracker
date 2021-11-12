@@ -1,8 +1,5 @@
 const ExpensesFilter = (props) => {
 
-  // const currentYear = new Date().getUTCFullYear(); // 2020
-  // const previousYear =  currentYear-1;
-
   const filterChangeHandler = (event) => {
     props.onChangeFilter(event.target.value);
   }
@@ -11,7 +8,6 @@ const ExpensesFilter = (props) => {
       <div className='expenses-filter'>
         <div className='expenses-filter__control'>
           <label>Filter by year</label>
-          {/* <select value={props.selected} onChange={filterChangeHandler}> */}
           <select value={props.selected} onChange={filterChangeHandler}>
             <option value='2022'>2022</option>
             <option value='2021'>2021</option>
