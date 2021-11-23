@@ -1,7 +1,8 @@
 {
   "name": "expanses-tracker",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
+  "homepage": "https://myusername.github.io/expanse-tracker",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
@@ -26,7 +27,7 @@
     "eject": "react-scripts eject",
     "sass": "sass src/Sass:src/Css --watch --no-source-map",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b deployment -d build",
   },
   "eslintConfig": {
     "extends": [
